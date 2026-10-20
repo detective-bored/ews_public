@@ -1,0 +1,11 @@
+# Private environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies, if using npm
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db

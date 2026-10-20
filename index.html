@@ -9,7 +9,48 @@
   </head>
   <body>
     <main>
+
+<button id="add-message-button" type="button">
+  + Add message
+</button>
+
+<dialog id="message-dialog" aria-labelledby="form-title">
+  <form id="message-form">
+
+    <label for="recipient">To:</label>
+    <input
+      id="recipient"
+      name="recipient"
+      type="text"
+      maxlength="100"
+      required
+    />
+
+    <label for="message-input">Message:</label>
+    <textarea
+      id="message-input"
+      name="message"
+      rows="6"
+      maxlength="5000"
+      required
+    ></textarea>
+
+    <p id="form-feedback" role="status" aria-live="polite"></p>
+
+    <div class="form-actions">
+      <button id="close-message-button" type="button">
+        Close
+      </button>
+
+      <button id="submit-message-button" type="submit">
+        Submit
+      </button>
+    </div>
+  </form>
+</dialog>
+
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="sketch.js"></script>
   </body>
 </html>
