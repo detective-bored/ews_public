@@ -13,7 +13,6 @@ function setup() {
   cols = windowWidth/30;
   rows = windowHeight/30; 
   createCanvas(windowWidth, windowHeight);
-  // print(windowWidth);
   let rowSize = height/rows;
   let colSize = width/cols; 
   populate();
@@ -35,8 +34,6 @@ function populate(){
   for(let i = 0; i < messages.length; i++){
     messages[i] = addbreaks(messages[i], 100);
   }
-  // print(messages);
-  // print(whom);
 }
 function draw() {
   background(0);
@@ -60,16 +57,10 @@ function draw() {
 }
 
 function countOccurrences(inputString, phrase) {
-  // Initialize a counter to keep track of occurrences
   let count = 0;
-
-  // Start searching for the phrase from the beginning of the string
   let position = inputString.indexOf(phrase);
-
-  // Use a while loop to find and count all occurrences
   while (position !== -1) {
     count++;
-    // Continue searching for the phrase from the position after the last occurrence
     position = inputString.indexOf(phrase, position + 1);
   }
 
@@ -138,8 +129,6 @@ class Info{
     stroke("white");
     textSize(30);
     fill("white");
-    // textAlign(CENTER);
-    // text("i", this.x +14,this.y+28);
     pop();
     this.mouseHover();
   }
@@ -168,7 +157,6 @@ class Cell {
       let temp = int(random(0,messages.length));
       this.note = messages[temp];
       this.note2 = whom[temp];
-      // print(this.note);
     }
   }
   
@@ -179,7 +167,7 @@ class Cell {
     this.angle += 0.03; 
     let distance = dist(mouseX,mouseY,this.x0,this.y0)*0.1;
     if(this.has > 499){
-      this.size = map(distance, 0, 35, 35, 1);
+      this.size = map(distance, 0, 30, 30, 1);
       if(this.size > 35 || this.size < 1){
         this.size = 1;
       }
@@ -193,33 +181,29 @@ class Cell {
   }
   mouseHover(){
     let distance = dist(mouseX, mouseY, this.x0, this.y0);
-     if (distance < 50){
-       this.color = 255;
-       if(distance < 20 && this.has > 499){
-         this.color = "orange";
-         
+    if(this.has > 499){
+      this.color = "#90D5FF";
+      if(distance < 20){
+        this.color = "orange";
         maketextbox(windowWidth/2, windowHeight/2, this.note);
         maketextbox(windowWidth/2, windowHeight * 2/5, this.note2);
-//         strokeWeight(4);
-       }
+      }
+    } else {
+      if (distance < 50){
+        this.color = 255;
       } else {
-        if (this.color > 70){
-          this.color -= 3; 
-      } else {
-          this.color = 70;
+        if (this.color > 100){
+          this.color -= 2; 
+        } else {
+          this.color = 100;
+        }
       }
     }
   }
   
   display(){
-    // ellipse(this.x0, this.y0, this.r*2, this.r*2);
-    // line(this.x0, this.y0, this.x0+this.x, this.y0+this.y);
     noFill();
-
-    //this.mouseHover();
     stroke(this.color);
-
-//    stroke("white");
     ellipse(this.x0+this.x, this.y0+this.y, this.size, this.size);
     this.mouseHover();
   }
