@@ -1,5 +1,7 @@
 # Everything I Wish I Said
 
+[Live Site](https://ewspublic.vercel.app/)
+
 An interactive space for messages to people we miss, cannot reach, or never found the words to speak to.
 
 Developed from the concept **Querying the Map**, this project invites visitors to explore a field of animated waves and discover messages hidden among their movement. Visitors can also contribute their own messages, allowing them to get lost and added to the shared, anonymous collection.
