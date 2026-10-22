@@ -8,9 +8,7 @@ The project explores how an interface can create space for reflection, connectio
 
 [Live Site](https://ewspublic.vercel.app/)
 
-![front_page](./imgs/frontpage.png)
-![message_view](./imgs/messageview.png)
-![add_message](./imgs/addmessage.png)
+![front_page](./imgs/demo.gif)
 
 ## Experience
 
