@@ -1,5 +1,9 @@
 # Everything I Wish I Said
 
+![front_page](./imgs/frontpage.png)
+![message_view](./imgs/messageview.png)
+![add_message](./imgs/addmessage.png)
+
 [Live Site](https://ewspublic.vercel.app/)
 
 An interactive space for messages to people we miss, cannot reach, or never found the words to speak to.
