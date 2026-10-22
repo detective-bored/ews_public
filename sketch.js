@@ -216,7 +216,7 @@ function draw() {
   textSize(30);
   fill("white");
   textAlign(CENTER);
-  text("everthing i wish i said", windowWidth/2, 50);
+  text("everything i wish i said", windowWidth/2, 50);
   pop();
   for (let i=0; i<cols+10; i++){
     for (let j=0; j<rows+10; j++){
